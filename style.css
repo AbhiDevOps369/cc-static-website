@@ -1,0 +1,22 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #0f172a;
+    color: white;
+}
+
+header {
+    padding: 50px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #22c55e;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #16a34a;
+}
