@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Abhiram – Modern Full-Stack Developer & Designer showcasing interactive projects and creative web experiences.">
+    <title>Abhiram | Portfolio & Project Showcase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">✨</span>
+                <span class="logo-text">Abhiram</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#quiz">Interactivity</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-badge">
+                <span class="pulse-dot"></span>
+                Available for Projects
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-orb orb-1"></div>
+        <div class="hero-orb orb-2"></div>
+        <div class="hero-orb orb-3"></div>
+        <div class="hero-content">
+            <div class="hero-tag">
+                <span class="tag-dot"></span>
+                Full-Stack Developer & Designer
+            </div>
+            <h1 class="hero-title">
+                Building Digital<br>
+                <span class="gradient-text">Masterpieces</span>
+            </h1>
+            <p class="hero-subtitle">
+                I specialize in crafting premium web applications, clean user interfaces, and robust server architectures that solve complex real-world problems.
+            </p>
+            <div class="hero-actions">
+                <button class="btn-primary" id="learnMoreBtn" onclick="scrollToSection('projects')">
+                    View My Work
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+                <button class="btn-secondary" onclick="scrollToSection('contact')">Get in Touch</button>
+            </div>
+            <div class="hero-metrics">
+                <div class="metric">
+                    <span class="metric-value">15+</span>
+                    <span class="metric-label">Completed Projects</span>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric">
+                    <span class="metric-value">99.9%</span>
+                    <span class="metric-label">Code Efficiency</span>
+                </div>
+                <div class="metric-divider"></div>
+                <div class="metric">
+                    <span class="metric-value" id="liveTime">--</span>
+                    <span class="metric-label">Local Time</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="server-card">
+                <div class="server-header">
+                    <div class="server-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <span class="server-title">developer_terminal.sh</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line"><span class="t-user">guest@abhiram</span><span class="t-sym">:~$</span> <span class="t-cmd" id="typedCmd"></span><span class="cursor-blink">|</span></div>
+                    <div class="terminal-output" id="termOutput"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-label">About Me</div>
+            <h2 class="section-title">My Philosophy</h2>
+            <p class="section-subtitle">Writing clean, maintainable code to create interactive and engaging human-centered interfaces.</p>
+
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="card-icon">💻</div>
+                    <h3>Full-Stack Architecture</h3>
+                    <p>Building rich frontend architectures connected to responsive backends. Crafting fluid layouts with clean semantic structures and performance optimization in mind.</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Blazing Fast Performance</h3>
+                    <p>Optimizing image loads, asynchronous fetching, and DOM structure. Believing that speed is the most critical design language of modern web development.</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">🎨</div>
+                    <h3>User-First Design</h3>
+                    <p>Designing user interfaces that feel smooth, immersive, and natural to navigate. Crafting elegant custom transitions and responsive components that wow.</p>
+                </div>
+                <div class="about-card">
+                    <div class="card-icon">🔒</div>
+                    <h3>Robust Security</h3>
+                    <p>Securing application endpoints, managing data privacy, hashing user credentials, and validating structural forms to avoid common security vectors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section section-alt">
+        <div class="container">
+            <div class="section-label">My Works</div>
+            <h2 class="section-title">Recent Projects</h2>
+            <p class="section-subtitle">A collection of custom applications demonstrating clean logic and beautiful designs.</p>
+
+            <div class="services-list">
+                <div class="service-item" data-index="1">
+                    <div class="service-num">01</div>
+                    <div class="service-icon">🛒</div>
+                    <div class="service-info">
+                        <h3>VeloCart E-Commerce</h3>
+                        <p>A full-featured shopping application with real-time cart computations, item state updates, dynamic pricing, and an immersive checkout workflow.</p>
+                    </div>
+                    <div class="service-tag">MERN Stack</div>
+                </div>
+
+                <div class="service-item" data-index="2">
+                    <div class="service-num">02</div>
+                    <div class="service-icon">📂</div>
+                    <div class="service-info">
+                        <h3>Encrypted File Storage</h3>
+                        <p>A secure local file storage simulation featuring client-side file splitting, AES-256 block encryption, and smooth binary merging for downloads.</p>
+                    </div>
+                    <div class="service-tag">Python & Security</div>
+                </div>
+
+                <div class="service-item" data-index="3">
+                    <div class="service-num">03</div>
+                    <div class="service-icon">✅</div>
+                    <div class="service-info">
+                        <h3>TaskForce Planner</h3>
+                        <p>An interactive, collaborative task manager featuring smooth task sorting, priority tags, visual calendar representation, and category management.</p>
+                    </div>
+                    <div class="service-tag">React / Node.js</div>
+                </div>
+
+                <div class="service-item" data-index="4">
+                    <div class="service-num">04</div>
+                    <div class="service-icon">🌊</div>
+                    <div class="service-info">
+                        <h3>RiverFlow Avatar Platform</h3>
+                        <p>A responsive platform component designed for dynamic avatar rendering with client-side sizing constraints and fallback placeholders.</p>
+                    </div>
+                    <div class="service-tag">Frontend Engine</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="section">
+        <div class="container">
+            <div class="section-label">Performance Statistics</div>
+            <h2 class="section-title">Development by Numbers</h2>
+            <p class="section-subtitle">Evaluating the metrics behind efficient program design.</p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" data-target="98">0</div>
+                    <div class="stat-unit">%</div>
+                    <div class="stat-label">Lighthouse Performance</div>
+                    <div class="stat-desc">SEO, Speed, and Accessibility</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="12">0</div>
+                    <div class="stat-unit">K+</div>
+                    <div class="stat-label">Lines of Code Written</div>
+                    <div class="stat-desc">Clean, commented, and modular</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="100">0</div>
+                    <div class="stat-unit">%</div>
+                    <div class="stat-label">Responsive Layouts</div>
+                    <div class="stat-desc">Perfect across mobile and desktop</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="24">0</div>
+                    <div class="stat-unit">/7</div>
+                    <div class="stat-label">System Testing</div>
+                    <div class="stat-desc">Automated validation runs</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="skills" class="section section-alt">
+        <div class="container">
+            <div class="section-label">Technology</div>
+            <h2 class="section-title">My Tech Stack</h2>
+            <p class="section-subtitle">Languages, runtimes, and libraries I use to construct applications.</p>
+
+            <div class="stack-container">
+                <div class="stack-layer">
+                    <div class="layer-label">Front-End Design</div>
+                    <div class="stack-tags">
+                        <span class="tech-tag html">HTML5</span>
+                        <span class="tech-tag css">CSS3 / Flexbox</span>
+                        <span class="tech-tag js">JavaScript (ES6+)</span>
+                        <span class="tech-tag">React.js</span>
+                    </div>
+                </div>
+                <div class="stack-arrow">↓</div>
+                <div class="stack-layer">
+                    <div class="layer-label">Back-End Logic</div>
+                    <div class="stack-tags">
+                        <span class="tech-tag nginx">Node.js</span>
+                        <span class="tech-tag">Express.js</span>
+                        <span class="tech-tag">RESTful APIs</span>
+                    </div>
+                </div>
+                <div class="stack-arrow">↓</div>
+                <div class="stack-layer">
+                    <div class="layer-label">Database & Storage</div>
+                    <div class="stack-tags">
+                        <span class="tech-tag ubuntu">MongoDB</span>
+                        <span class="tech-tag">Mongoose</span>
+                        <span class="tech-tag">Local Storage API</span>
+                    </div>
+                </div>
+                <div class="stack-arrow">↓</div>
+                <div class="stack-layer">
+                    <div class="layer-label">Tooling & Workflow</div>
+                    <div class="stack-tags">
+                        <span class="tech-tag aws">Git & GitHub</span>
+                        <span class="tech-tag">Vite Bundler</span>
+                        <span class="tech-tag">npm package manager</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custom Interactive Code Editor Display -->
+            <div class="deploy-steps">
+                <h3>Snippet: Modern Async API Fetcher</h3>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span>api.js — Modern Javascript</span>
+                        <button class="copy-btn" onclick="copyCode()">Copy Code</button>
+                    </div>
+                    <pre><code><span class="c-comment">// Async function to securely fetch server-side records</span>
+async function fetchRecords(endpoint) {
+    try {
+        const response = await fetch(\`/api/v1/\${endpoint}\`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        if (!response.ok) throw new Error(\`Network error: \${response.status}\`);
+        return await response.json();
+    } catch (error) {
+        console.error("Failed to load repository data:", error.message);
+        return null;
+    }
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="section">
+        <div class="container">
+            <div class="section-label">Interactive Game</div>
+            <h2 class="section-title">Web Development Quiz</h2>
+            <p class="section-subtitle">Test your frontend knowledge in real-time.</p>
+
+            <div class="quiz-card">
+                <div class="quiz-progress">
+                    <div class="quiz-progress-bar" id="progressBar"></div>
+                </div>
+                <div class="quiz-question" id="quizQuestion">Loading question...</div>
+                <div class="quiz-options" id="quizOptions"></div>
+                <div class="quiz-feedback" id="quizFeedback"></div>
+                <div class="quiz-footer">
+                    <span class="quiz-score" id="quizScore">Score: 0 / 0</span>
+                    <button class="btn-primary" id="nextBtn" onclick="nextQuestion()" style="display:none;">Next →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-alt">
+        <div class="container contact-container">
+            <div class="section-label">Contact</div>
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Let's discuss how we can build something incredible together.</p>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">📍</div>
+                        <div>
+                            <strong>Location</strong>
+                            <span>Pune, Maharashtra, India</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">📧</div>
+                        <div>
+                            <strong>Email Address</strong>
+                            <span>abhiram.dev@outlook.com</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">🐙</div>
+                        <div>
+                            <strong>GitHub Profile</strong>
+                            <span>github.com/AbhiDevOps369</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">💼</div>
+                        <div>
+                            <strong>LinkedIn</strong>
+                            <span>linkedin.com/in/abhiram-dev</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-visual">
+                    <div class="flow-diagram">
+                        <div class="diagram-user">
+                            <div class="d-icon">🚀</div>
+                            <div class="d-label">Dynamic Ideas</div>
+                            <div class="d-sublabel">Your design visions</div>
+                        </div>
+                        <div class="diagram-arrow">
+                            <div class="arrow-line"></div>
+                            <div class="arrow-label">Clean Code<br>Implementation</div>
+                        </div>
+                        <div class="diagram-server">
+                            <div class="d-icon">💻</div>
+                            <div class="d-label">Production App</div>
+                            <div class="d-sublabel">Fully live & scalable</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">✨ Abhiram</div>
+            <p>A beautiful developer portfolio showcasing dynamic interactive components and responsive designs.</p>
+            <div class="footer-tags">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>Responsive</span>
+                <span>Interactive UI</span>
+            </div>
+            <p class="footer-copy">© 2026 Abhiram · Built for Interactive Web Showcases</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
